@@ -1,6 +1,6 @@
-const WebSocket = require("ws");
+import WebSocket, { WebSocketServer } from "ws";
 
-const wss = new WebSocket.Server({port: 8080});
+const wss = new WebSocketServer({port: 8080});
 
 wss.on("connection", (connection) => {
   console.log("新的使用者已連線");
